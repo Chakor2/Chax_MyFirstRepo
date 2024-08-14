@@ -1,6 +1,6 @@
 # Overview of Admin Console
 
-The Admin Console enables Hitachi Cloud Accelerator Platform administrators to manage a common set of groups and users for the following accelerators:
+The Admin Console enables the Hitachi Cloud Accelerator Platform administrators to manage a common set of groups and users for the following accelerators:
 
 - Hitachi Cloud Accelerator Platform - Deploy (Deploy Accelerator)
 - Hitachi Cloud Accelerator Platform - Assess (Assess Accelerator)
