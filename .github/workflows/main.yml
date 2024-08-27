@@ -1,0 +1,277 @@
+site_name: Hitachi Cloud Accelerator Platform Documentation
+site_description: Hitachi Cloud Accelerator Platform Documentation
+
+theme:
+    name: material
+    custom_dir: overrides/
+    include_search_page: false
+    search_index_only: true
+
+    language: en
+    features:
+        - navigation.tabs
+        - navigation.top
+
+    palette:
+        scheme: default
+        primary: black
+        accent: none
+    font:
+        text: Roboto
+        code: Roboto Mono
+    favicon: assets/images/favicon.ico
+    logo: assets/images/logo.png
+
+extra_css:
+   - assets/stylesheets/extra.css
+   - assets/stylesheets/bootstrap.min.css
+
+extra_javascript:
+  - assets/javascripts/bootstrap.min.js
+
+extra:
+  platformCommon:
+      subMenu:
+        - displayName: Getting Started
+          image: assets/images/new/hv/gettingstarted.png
+          path: getting-started/overview.html
+          description: Get an overview of Cloud Accelerator Platform, view the list of supported browsers, and learn to create and manage your own account.
+        - displayName: Accelerators
+          image: assets/images/new/hv/accelerators.png
+          path: deploy/acceleratorOverview.html
+          description: Learn how to use the accelerators to deploy, assess, and test infrastructure in your cloud account.
+        - displayName: Admin Console
+          image: assets/images/new/hv/adminconsole.png
+          path: admin-console/overview.html
+          description: Learn how to manage users and groups, and how to configure the integration with Active Directory.
+        - displayName: DevSecOps
+          image: assets/images/new/hv/devsecops.png
+          path: devops/gettingStarted.html
+          description: Learn about DevSecOps services, which provide a framework for orchestrating CI/CD pipelines.
+        - displayName: Platform CLI
+          image: assets/images/new/hv/cli1.png
+          path: platform-cli/installCLI.html
+          description: Learn how to install, configure, and use the Command Line Interface provided with Cloud Accelerator Platform.
+
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/HitachiVantara
+      name: Twitter
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/c/HitachiVantara
+      name: Youtube
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/11257500
+      name: LinkedIn
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/HitachiVantara
+      name: Facebook
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/hitachivantara/
+      name: Instagram
+
+copyright:  '&copy; Hitachi Vantara LLC 2022. All Rights Reserved.'
+
+# Page tree
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Overview of Cloud Accelerator Platform: getting-started/overview.md
+    - Supported browsers and screen resolution: getting-started/browsers.md
+    - Create and access Cloud Accelerator Platform account: getting-started/createAndAccessAccount.md
+    - Manage your Cloud Accelerator Platform account: getting-started/manageAccount.md
+    - FAQ: getting-started/faqs.md
+  - Accelerators:
+    - Overview: deploy/acceleratorOverview.md
+    - Deploy Accelerator:
+      - Overview: deploy/overview.md
+      - Deploy and manage environments:
+        - Supported Terraform and provider versions: deploy/terraform-versions.md
+        - Manage providers: deploy/manageProviders.md
+        - Manage connections: deploy/manageConnections.md
+        - Create environments: deploy/createEnv.md
+        - Deploy environments: deploy/deployEnv.md
+        - Create and release environment versions: deploy/releaseEnv.md
+        - Upgrade existing deployments: deploy/upgradeDep.md
+        - Manage environments: deploy/manageEnv.md
+        - Collaborate with other users: deploy/collaborate.md
+        - Export environments: deploy/exportEnv.md
+        - Add blueprints in the Blueprint Gallery: deploy/manageBlueprint.md
+        - Manage resources: deploy/manageResources.md
+        - Manage packages: deploy/managePackages.md
+        - Perform post-upgrade tasks: deploy/postUpgrade.md
+      - Administer:
+        - Configure the Blueprint Gallery: deploy/configBlueprint.md
+        - Configure packages: deploy/configPackages.md
+        - Register a Chef server in Deploy Accelerator: deploy/chef.md
+        - Configure Deploy Accelerator: deploy/configDeploy.md
+        - Customize email messages: deploy/email.md
+      - How-to guides: deploy/howto-guides.md
+      - API Reference: deploy/api-reference.md
+      - FAQ: deploy/faqsDeploy.md
+    - Assess Accelerator:
+      - Overview: assess/getting-started.md
+      - Access the Assess Accelerator UI: assess/access-ui.md
+      - Supported Assessment Tool versions: assess/tools-versions.md
+      - Create and manage customer accounts: assess/accounts.md
+      - View assessment results: assess/using.md
+      - Manage assessments: assess/assess-manage.md
+      - Assessment checks reference: assess/assess-checks.md
+      - API Reference: assess/api-reference.md  
+    - Test Accelerator:
+      - Overview: test/overview.md
+      - Run application tests: test/appTest.md
+      - Run infrastructure tests:
+        - Run infrastructure tests with custom code: test/infraTestCustom.md
+        - Run codeless AWS infrastructure tests: test/infraTestAWS.md
+        - Run codeless Azure infrastructure tests: test/infraTestAzure.md
+        - Run codeless GCP infrastructure tests: test/infraTestGCP.md
+      - View test results: test/result.md
+      - Manage test jobs: test/manage.md
+      - Administer: test/administer.md
+      - API Reference: test/api-reference.md
+      - FAQ: test/faqsTest.md
+    - Observe Accelerator:
+      - Overview: observe/overview.md
+      - Access the Observe Accelerator UI: observe/access-ui.md
+      - Create and manage customers: observe/accounts.md
+      - Create and manage SLOs for customers: observe/slo.md
+      - View SLO details: observe/slo-details.md
+    - Operate Accelerator:
+      - Overview: operate/overview.md
+      - Access the Operate Accelerator UI: operate/access-ui.md
+      - Incident creation: operate/IncidentCreation.md
+      - Collaboration tool and Chatbot: operate/CollaborationToolAndChatbot.md    
+  - Admin Console:
+    - Overview: admin-console/overview.md
+    - Manage users: admin-console/users.md
+    - Manage groups: admin-console/groups.md
+    - View policies: admin-console/policies.md
+    - Integrate Cloud Accelerator Platform with Active Directory: admin-console/activeDir.md
+    - Customize the password policy for user accounts: admin-console/passwordPolicy.md
+    - Customize user account lockout settings: admin-console/accountSettings.md
+    - Configure the session timeout for user accounts: admin-console/timeout.md
+    - Enable the Provider Service: admin-console/providerservice.md
+    - Create providers using the Provider Service: admin-console/providers.md 
+    - FAQ: admin-console/faqsAdmin.md
+  - DevSecOps:
+    - Overview: devops/gettingStarted.md
+    - Workstation Setup:
+      - Blueprint: devsecops/workstation-setup/blueprint-workstation.md
+      - Chef Cookbook: devsecops/workstation-setup/chef-cookbooks-workstation.md
+      - Groovy: devsecops/workstation-setup/groovy-workstation.md
+      - Helm: devsecops/workstation-setup/helm-workstation.md
+      - Infra and App Pipeline: devsecops/workstation-setup/infra-app-pipeline-workstation.md
+      - InSpec Profile: devsecops/workstation-setup/inspec-profiles-workstation.md
+      - Ruby Gem: devsecops/workstation-setup/ruby-gem-workstation.md
+      - Serverless: devsecops/workstation-setup/serverless-workstation.md
+      - Solution Package: devsecops/workstation-setup/solution-package-workstation.md
+    - Image Pipeline:
+      - Overview: devsecops/Overview.md
+      - Configure a DevSecOps workstation: devsecops/Configuring-a-DevSecOps-Workstation.md
+      - Create project: devsecops/Creating-Projects.md
+      - Configure project: devsecops/Configuring-Projects.md
+      - Build and test from Jenkins: devsecops/Building-and-Testing-from-Jenkins.md
+      - Build and test from your workstation: devsecops/Building-and-Testing-from-your-Workstation.md
+      - External configurations: devsecops/External-Configuration.md
+      - Customize projects: devsecops/Customizing-projects.md
+      - Learn the concepts: devsecops/Learn-the-concepts.md
+      - Set-up a Linux Virtual Machine: devsecops/Windows-Linux-Virtual-Machine-Setup.md
+    - CI Pipelines:
+      - CI Tasks: devsecops/ci-pipelines/ci-tasks.md
+      - Generating Pipelines: devsecops/ci-pipelines/generating-pipelines.md
+      - Blueprint Pipelines: devsecops/ci-pipelines/blueprint-pipelines.md
+      - Docker Pipelines: devsecops/ci-pipelines/docker-pipelines.md
+      - Helm Pipelines: devsecops/ci-pipelines/helm-pipelines.md
+      - Python Pipelines: devsecops/ci-pipelines/python-pipelines.md
+      - Serverless Pipelines: devsecops/ci-pipelines/serverless-pipelines.md
+      - Solution Package Pipelines: devsecops/ci-pipelines/solution-package-pipelines.md
+    - Happy Path Guides:
+      - App Classic: devsecops/happy-path-docs/app-classic/happy-path-app-classic.md
+      - App Modern: devsecops/happy-path-docs/app-modern/happy-path-app-modern.md
+      - Blueprint: devsecops/happy-path-docs/blueprint/happy-path-blueprint.md
+      - Helm: devsecops/happy-path-docs/helm/happy-path-helm.md
+      - Infra Standard: devsecops/happy-path-docs/infra-standard/happy-path-infra-standard.md
+      - Solution Package: devsecops/happy-path-docs/solution-package/happy-path-sp.md
+  - Platform CLI:
+    - Install and configure Platform CLI: platform-cli/installCLI.md
+    - Platform CLI Command Reference (v3.15.0):
+      - Admin Console: platform-cli/auth.md
+      - Deploy Accelerator: platform-cli/deploy.md
+      - Test Accelerator: platform-cli/test.md
+  - What's New?:
+    - Latest releases:
+      - Cloud Accelerator Platform Omnibus releases: whats-new/omnibus.md
+      - Deploy Accelerator: whats-new/deploy.md
+      - Assess Accelerator: whats-new/assess.md
+      - Test Accelerator: whats-new/test.md
+      - Observe Accelerator: whats-new/observe.md
+      - Operate Accelerator: whats-new/operate.md
+      - Admin Console and Platform Common Services: whats-new/admin.md
+      - Cloud Accelerator Platform CLI: whats-new/cli.md
+    - Archive:
+      - Cloud Accelerator Platform Omnibus releases (archive): whats-new/omnibusArchive.md
+      - Deploy Accelerator (archive): whats-new/deployArchive.md
+      - Assess Accelerator (archive): whats-new/assessArchive.md
+      - Test Accelerator (archive): whats-new/testArchive.md
+      - Admin Console and Platform Common Services (archive): whats-new/adminArchive.md
+      - Cloud Accelerator Platform CLI (archive): whats-new/cliArchive.md
+  - Demos:
+    - Deploy Accelerator:
+      - Deploy AWS based: demos/deployaws.md
+      - Deploy Azure based: demos/deployazure.md
+      - Deploy GCP based: demos/deploygcp.md
+    - Assess Accelerator:
+      - Assess AWS based: demos/assessaws.md
+      - Assess Azure based: demos/assessazure.md
+    - Test Accelerator:
+      - Test Accelerator demo: demos/testaws.md
+      - Test Azure based: demos/testazure.md 
+    - Observe Accelerator:
+      - Observe Overview: demos/observeazuredemo.md
+    - Operate Accelerator:
+      - Operate Overview: demos/operatedemo.md
+plugins:
+    - search
+    
+markdown_extensions:
+  - smarty:
+  - toc:
+      toc_depth: 4
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
